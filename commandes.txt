@@ -1,0 +1,14 @@
+dotnet --list-sdks
+dotnet -h
+dotnet tool list 
+
+https://www.nuget.org/packages?packagetype=dotnettool
+https://learn.microsoft.com/fr-fr/ef/core/cli/dbcontext-creation?tabs=dotnet-core-cli
+dotnet tool install --global dotnet-ef --version 8.0.0-preview.4.23259.3
+dotnet ef migrations add InitDatabase --project=..\SelfieAWookies.NET.Selfies.Data.Migrations
+
+dotnet ef migrations add AddDescription --startup-project . --project=..\SelfieAWookies.NET.Selfies.Infrastructures
+dotnet ef database update --startup-project . --project=..\SelfieAWookies.NET.Selfies.Infrastructures
+
+
+
